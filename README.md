@@ -1,5 +1,7 @@
 # Bostan - Premium Greengrocer E-commerce (v1.3)
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-2ea44f?style=for-the-badge&logo=vercel&logoColor=white)](https://bostan-ashen.vercel.app/)
+
 **Bostan** is a modern, premium e-commerce frontend designed for a local greengrocer. It emphasizes freshness, organic quality, and a seamless shopping experience using a high-end design language.
 
 ![Hero](/src/assets/hero-banner.png)
