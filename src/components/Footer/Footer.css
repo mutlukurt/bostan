@@ -1,0 +1,56 @@
+.footer {
+    background-color: #f7f9f7;
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-lg);
+    margin-top: var(--spacing-2xl);
+    border-top: 1px solid var(--border);
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.footerBrand .logo {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary);
+}
+
+.footerDesc {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.footerCol h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-dark);
+}
+
+.footerLinks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.footerLinks a {
+    color: var(--text-light);
+    transition: color var(--transition-fast);
+}
+
+.footerLinks a:hover {
+    color: var(--primary);
+}
+
+.copyright {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid #e5e5e5;
+}

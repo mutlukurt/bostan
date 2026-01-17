@@ -1,0 +1,30 @@
+.policyPage {
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+    min-height: 60vh;
+}
+
+.policyContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.policyItem {
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.policyItem h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.policyItem p {
+    color: var(--text-light);
+    line-height: 1.6;
+}

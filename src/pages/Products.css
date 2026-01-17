@@ -1,0 +1,22 @@
+.productsPage {
+    padding-bottom: var(--spacing-2xl);
+}
+
+.productsHero {
+    background-color: #f7f9f7;
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--border);
+}
+
+.productsHero h1 {
+    font-size: 3rem;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.productsHero p {
+    color: var(--text-light);
+    font-size: 1.25rem;
+}
