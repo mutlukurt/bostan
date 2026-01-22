@@ -1,4 +1,5 @@
 import React from 'react';
+import { Recycle, Tractor, Sprout } from 'lucide-react';
 
 const Sustainability = () => {
     return (
@@ -15,17 +16,23 @@ const Sustainability = () => {
                     gap: '2rem'
                 }}>
                     <div className="feature-card" style={{ background: 'white', padding: '2rem', borderRadius: '16px', textAlign: 'center', boxShadow: '0 4px 10px rgba(0,0,0,0.03)' }}>
-                        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>♻️</div>
+                        <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
+                            <Recycle size={48} color="var(--primary)" />
+                        </div>
                         <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Eco-Friendly Packaging</h3>
                         <p style={{ color: '#666' }}>We use 100% biodegradable or recyclable packaging for all our deliveries.</p>
                     </div>
                     <div className="feature-card" style={{ background: 'white', padding: '2rem', borderRadius: '16px', textAlign: 'center', boxShadow: '0 4px 10px rgba(0,0,0,0.03)' }}>
-                        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🚜</div>
+                        <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
+                            <Tractor size={48} color="var(--primary)" />
+                        </div>
                         <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Zero-Emission Delivery</h3>
                         <p style={{ color: '#666' }}>Our local fleet is electric-powered, reducing our carbon footprint with every mile.</p>
                     </div>
                     <div className="feature-card" style={{ background: 'white', padding: '2rem', borderRadius: '16px', textAlign: 'center', boxShadow: '0 4px 10px rgba(0,0,0,0.03)' }}>
-                        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🌱</div>
+                        <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
+                            <Sprout size={48} color="var(--primary)" />
+                        </div>
                         <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Sustainable Farming</h3>
                         <p style={{ color: '#666' }}>We only partner with farms that use regenerative agriculture practices.</p>
                     </div>
