@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 import ProductCard from '../ProductCard/ProductCard'; // Assuming ProductCard exists
 
 import honeyImg from '../../assets/images/honey.png';
@@ -15,22 +17,21 @@ const newArrivalsData = [
 ];
 
 const NewArrivals = () => {
+    const { addToCart } = useCart();
+
     return (
         <section className="section py-3">
             <div className="container">
                 <div className="section-header" style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <h2 style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--text-dark)' }}>New Arrivals</h2>
-                    <a href="/products?sort=newest" style={{ color: 'var(--primary)', fontWeight: 'bold', textDecoration: 'none' }}>View All &rarr;</a>
+                    <Link to="/new-arrivals" style={{ color: 'var(--primary)', fontWeight: 'bold', textDecoration: 'none' }}>View All &rarr;</Link>
                 </div>
                 <div className="product-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
                     gap: '2rem'
                 }}>
-                    {/* Fallback if ProductCard component structure is unknown, using simple cards for now but aiming to reuse if possible. 
-                        Let's try to assume a simple structure or build internal card if ProductCard is complex.
-                        I'll build internal cards to be safe given missing imports context, but styled nicely.
-                    */}
+                    {/* Reusing the card structure with added functionality */}
                     {newArrivalsData.map((product) => (
                         <div key={product.id} className="product-card" style={{
                             border: '1px solid #eee',
@@ -81,6 +82,7 @@ const NewArrivals = () => {
                                 cursor: 'pointer',
                                 transition: 'background 0.2s'
                             }}
+                                onClick={() => addToCart(product)}
                                 onMouseOver={(e) => { e.currentTarget.style.background = 'var(--primary, #fa8231)'; e.currentTarget.style.color = 'white' }}
                                 onMouseOut={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--primary, #fa8231)' }}
                             >
