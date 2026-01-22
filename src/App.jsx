@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import CartSidebar from './components/Cart/CartSidebar'
 import Footer from './components/Footer/Footer'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+
 
 // Lazy Load Pages
 const Home = lazy(() => import('./pages/Home'))
@@ -33,6 +35,7 @@ function App() {
   return (
     <div className="app">
       <Header />
+      <ScrollToTop />
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
