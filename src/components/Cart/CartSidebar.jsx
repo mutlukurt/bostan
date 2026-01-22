@@ -4,7 +4,7 @@ import { useCart } from '../../context/CartContext.jsx'
 import './CartSidebar.css'
 
 const CartSidebar = () => {
-    const { cart, isCartOpen, toggleCart, removeFromCart, updateQuantity, cartTotal } = useCart()
+    const { cart, isCartOpen, toggleCart, removeFromCart, updateQuantity, cartTotal, clearCart } = useCart()
 
     return (
         <div className={`cartOverlay ${isCartOpen ? 'open' : ''}`} onClick={toggleCart}>
@@ -58,7 +58,24 @@ const CartSidebar = () => {
                             <span>Total</span>
                             <span>${cartTotal.toFixed(2)}</span>
                         </div>
-                        <button className="checkoutBtn">Checkout</button>
+                        <div style={{ display: 'flex', gap: '1rem' }}>
+                            <button
+                                onClick={clearCart}
+                                style={{
+                                    flex: 1,
+                                    padding: '1rem',
+                                    backgroundColor: 'transparent',
+                                    border: '1px solid #ddd',
+                                    borderRadius: '8px',
+                                    cursor: 'pointer',
+                                    fontWeight: '600',
+                                    color: '#666'
+                                }}
+                            >
+                                Clear Cart
+                            </button>
+                            <button className="checkoutBtn" style={{ flex: 1 }}>Checkout</button>
+                        </div>
                     </div>
                 )}
             </aside>

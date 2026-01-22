@@ -17,10 +17,10 @@ const Footer = () => {
                     <div className="footerCol">
                         <h4>Shop</h4>
                         <ul className="footerLinks">
-                            <li><Link to="/products">Fruits</Link></li>
-                            <li><Link to="/products">Vegetables</Link></li>
-                            <li><Link to="/products">New Arrivals</Link></li>
-                            <li><Link to="/products">Best Sellers</Link></li>
+                            <li><Link to="/products?category=Fruits">Fruits</Link></li>
+                            <li><Link to="/products?category=Vegetables">Vegetables</Link></li>
+                            <li><Link to="/new-arrivals">New Arrivals</Link></li>
+                            <li><Link to="/best-sellers">Best Sellers</Link></li>
                         </ul>
                     </div>
 
@@ -28,8 +28,8 @@ const Footer = () => {
                         <h4>Company</h4>
                         <ul className="footerLinks">
                             <li><Link to="/about">About Us</Link></li>
-                            <li><Link to="/about#farmers">Farmers</Link></li>
-                            <li><Link to="/about#sustainability">Sustainability</Link></li>
+                            <li><Link to="/farmers">Farmers</Link></li>
+                            <li><Link to="/sustainability">Sustainability</Link></li>
                             <li><Link to="/contact">Contact</Link></li>
                         </ul>
                     </div>

@@ -1,4 +1,4 @@
-# Bostan - Premium Greengrocer E-commerce (v1.3)
+# Bostan - Premium Greengrocer E-commerce (v1.4)
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-2ea44f?style=for-the-badge&logo=vercel&logoColor=white)](https://bostan-ashen.vercel.app/)
 
@@ -19,7 +19,12 @@
 - **Micro-animations**: Smooth hover states, transitions, and interactive elements.
 - **Custom Assets**: 100% AI-generated, high-resolution imagery for branding and products.
 
-### v1.3 UX Improvements (New)
+### v1.4 UI & UX Enhancements (Latest)
+- **Clear Cart Feature**: Users can now empty their entire basket with a single click in the Cart Sidebar.
+- **Improved Navigation**: Fixed filtering logic for category cards (Fresh Vegetables, Seasonal Fruits).
+- **Interactive Visuals**: Added zoom-on-hover effects to "New Arrivals" and "Best Sellers" product cards for a more engaging browsing experience.
+
+### v1.3 UX Improvements
 - **Mobile Menu**: Fully functional hamburger menu for mobile and tablet devices with smooth slide animations.
 - **Glassmorphism UI**: Consistent use of blur effects in navigation drawers.
 
@@ -84,7 +89,7 @@ src/
 
 ## 🔮 Future Roadmap
 
-### v1.4 (Upcoming)
+### v1.5 (Upcoming)
 - **Next-Gen Formats**: Convert all static PNG assets to **WebP** for superior compression and faster load times.
 
 ### v2.0 (Long Term)

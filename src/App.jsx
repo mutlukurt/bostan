@@ -9,6 +9,10 @@ const Home = lazy(() => import('./pages/Home'))
 const Products = lazy(() => import('./pages/Products'))
 const About = lazy(() => import('./pages/About'))
 const Contact = lazy(() => import('./pages/Contact'))
+const Farmers = lazy(() => import('./pages/Farmers'))
+const Sustainability = lazy(() => import('./pages/Sustainability'))
+const NewArrivals = lazy(() => import('./pages/NewArrivals'))
+const BestSellers = lazy(() => import('./pages/BestSellers'))
 const Policy = lazy(() => import('./pages/Policy'))
 
 // Loading Component
@@ -33,6 +37,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/farmers" element={<Farmers />} />
+          <Route path="/sustainability" element={<Sustainability />} />
+          <Route path="/new-arrivals" element={<NewArrivals />} />
+          <Route path="/best-sellers" element={<BestSellers />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<Policy type="faq" />} />

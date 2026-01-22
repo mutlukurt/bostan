@@ -1,10 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import ProductCard from '../ProductCard/ProductCard'
 import { PRODUCTS, CATEGORIES } from '../../data/products'
 import './ProductList.css'
 
 const ProductList = ({ limit, title }) => {
-    const [activeCategory, setActiveCategory] = useState('All')
+    const [searchParams, setSearchParams] = useSearchParams()
+    const [activeCategory, setActiveCategory] = useState(searchParams.get('category') || 'All')
+
+    useEffect(() => {
+        const categoryParam = searchParams.get('category')
+        if (categoryParam && CATEGORIES.includes(categoryParam)) {
+            setActiveCategory(categoryParam)
+        } else if (!categoryParam) {
+            setActiveCategory('All')
+        }
+    }, [searchParams])
+
+    const handleCategoryChange = (cat) => {
+        setActiveCategory(cat)
+        if (cat === 'All') {
+            searchParams.delete('category')
+        } else {
+            searchParams.set('category', cat)
+        }
+        setSearchParams(searchParams, { replace: true })
+    }
 
     let displayProducts = activeCategory === 'All'
         ? PRODUCTS
@@ -27,7 +48,7 @@ const ProductList = ({ limit, title }) => {
                         <button
                             key={cat}
                             className={`filterBtn ${activeCategory === cat ? 'active' : ''}`}
-                            onClick={() => setActiveCategory(cat)}
+                            onClick={() => handleCategoryChange(cat)}
                         >
                             {cat}
                         </button>
